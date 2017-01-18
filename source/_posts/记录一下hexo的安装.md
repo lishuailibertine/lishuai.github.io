@@ -1,4 +1,4 @@
----
+﻿---
 title: 记录一下hexo的安装
 date: 2016-11-05 14:12:24
 tags:
@@ -8,7 +8,7 @@ tags:
 
 开始
 <!--more-->
-------
+
 * [安装node.js](#安装node.js)
 * [安装hexo](#安装hexo)
 * [hexo初始化](#hexo初始化)
@@ -54,7 +54,7 @@ $ npm install https://github.com/CodeFalling/hexo-asset-image --save
 ```
 >这样就可以看到在根目录的source/_posts下创建了一个跟md文件同名的文件夹如下图所示：
 
-![yml](纪录一下hexo的安装/yml.png)
+![yml](yml.png)
 >在blog中使用图片的时候就在这个文件下建立需要的图片，在.md文件中引用即可,引用方式:
 ```
 ![图片](文件夹名字/xx.png)'

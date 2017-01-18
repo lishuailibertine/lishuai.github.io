@@ -1,15 +1,15 @@
-# Header
+﻿# Header
 menu:
   主页: /
   所有文章: /archives
-  随笔: /tags/随笔
-  技术: /tags/技术
+  #工作中的点滴: /tags/工作中的点滴
+  #项目: /tags/项目
 
 # SubNav
 subnav:
-  github: https://github.com/CrazyMilk
-  zhihu: https://zhihu.com/people/CrazyMilk
-  weibo: http://weibo.com/CatDrinkMilk
+  github: https://github.com/lishuailibertine
+  #zhihu: https://zhihu.com/people/CrazyMilk
+  weibo: http://weibo.com/u/2119571524
   #rss: "#"
   #douban: "#"
   #mail: "#"
@@ -50,12 +50,10 @@ tagcloud: true
 #不开启——
 #friends: false
 #开启——
-friends:
-  JuniperPhoton: http://juniperphoton.net/
-  yazoo: http://yazhuo.github.io/
+friends: false
 
 #是否开启“关于我”。
 #不开启——
 #aboutme: false
 #开启——
-aboutme: 嗯...我是喵星人，我从火星来，任务是让你们猜不透~
+aboutme: 已所不欲，勿施于人。
