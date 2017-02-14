@@ -1,4 +1,5 @@
 ---
+layout: draft
 title: xcode中的一些编译选项介绍
 date: 2016-12-29 18:58:23
 tags: 小知识

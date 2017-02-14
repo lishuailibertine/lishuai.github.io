@@ -1,4 +1,5 @@
 ---
+layout: draft
 title: dispatch_sync使用中的问题
 date: 2016-11-30 17:50:40
 tags: 工作中的点滴
