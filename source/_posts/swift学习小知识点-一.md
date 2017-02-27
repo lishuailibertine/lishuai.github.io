@@ -1,5 +1,5 @@
 layout: post
-title: swift学习小知识点(一)
+title: Swift学习小知识点-构造过程
 comment: true
 tags: [swift,小知识]
 date: 2017-02-27 15:10:02
