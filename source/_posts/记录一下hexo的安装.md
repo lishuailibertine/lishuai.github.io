@@ -16,7 +16,7 @@ tags:
 * [同步hexo到github](#同步hexo到github)
 * [主题更换](#主题更换)
 * [一些配置项修改](#一些配置项修改)
-* [换电脑了怎么办?(2017/5/8增加)](#换电脑了怎么办?(2017/5/8增加))
+* [换电脑了怎么办?(2017/5/8增加)](#换电脑了怎么办?(2017/5/8增加)
 
 安装node.js
 >使用下面的命令(直接在终端输入):
@@ -92,7 +92,7 @@ $ hexo d- g
 [可以参考这里](https://github.com/litten/hexo-theme-yilia "github")
 
 换电脑了怎么办?(2017/5/8增加)
-------
+-----
 可以依次执行下面的命令:
 ```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -103,7 +103,7 @@ npm install hexo-deployer-git
 npm install https://github.com/CodeFalling/hexo-asset-image --save
 ```
 
->如果在执行hexo g -d 时遇到`{ Error: Cannot find module './build/Release/DTraceProviderBindings’`错误可以用下面的命令尝试解决:
+如果在执行hexo g -d 时遇到`{ Error: Cannot find module './build/Release/DTraceProviderBindings’`错误可以用下面的命令尝试解决:
 ------
 
 ```
