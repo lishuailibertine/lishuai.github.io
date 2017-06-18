@@ -1,13 +1,13 @@
 layout: post
 title: Universal Links集成
 comment: true
-tags: [工作中点滴]
+tags: [工作中的点滴]
 date: 2017-06-18 18:11:46
 updated: 2017-06-18 18:11:46
 ---
+>写这篇文章的目的是记录下在项目中集成`Universal Links`所遇到的问题。
 <!--more-->
-写这篇文章的目的是记录下在项目中集成`Universal Links`所遇到的问题。
-在介绍遇到的问题之前先来说下`Universal Links`
+>在介绍遇到的问题之前先来说下`Universal Links`
 
 what's this?
 官方介绍;
