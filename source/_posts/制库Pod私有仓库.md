@@ -117,12 +117,17 @@ end
 
 >pod lib lint --allow-warnings `本地podspec文件地址`
 
+`2017-6-27增加`
+>在我们需要依赖一些自己的做的pod库的时候，因为这些仓库的地址是放在我们的私有仓库下的。默认情况下我们直接去依赖，然后去校验`podspec`文件是有问题的。
+解决办法:
+在校验`podspec`文件的时候指定下我们的私有仓库地址-> pod lib lint --sources =`地址1`,`地址2`
+
 第五步:打个tag上传到我们的pod库
 
 >git add .
 >git commit -m "描述信息"
 >git tag 版本号 -m "描述信息"
->git push tags
+>git push --tags
 
 第六步:push我们刚才做的pod库到我们pods仓库中
 
