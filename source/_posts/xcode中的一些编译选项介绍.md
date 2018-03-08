@@ -53,3 +53,23 @@ Dead Code Stripping
 >功能介绍：用于删除对象文件中不需要加载的符号，减小二进制文件大小
 
 >如何配置：省略
+
+2018-3-8 新增
+Runpath Search Paths
+
+>功能介绍：
+@executable_path 这个变量表示可执行程序所在的目录
+
+Search Paths
+
+>$(inherited): 一个项目里面有多个target，使用到了同一个库(Library或Framework)那么为了方便我们可以在target添加继承参数
+继承的优先级：
+1、Platform defaults
+2、Project file (描述举例用这个优先级，比较常用)
+3、xcconfig file for the Project file
+4、Target
+5、xcconfig file for the Target
+
+>recursive:遍历该目录,会遍历该目录下的所有子目录的库文件。
+
+>non-recursive:不遍历该目录。
