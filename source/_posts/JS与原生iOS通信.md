@@ -11,11 +11,10 @@ updated: 2019-07-11 13:40:46
 ### 通信组件如何去设计
 1、我想让它不仅能在UIWebview内核中使用，它还可以在最新的内核WKwebview中使用;
 2、需要一个管理JS上下文的类，这个类与webview打交道，除了注册我们业务层需要的功能，它还负责把h5的消息传递给原生;
-# 通信组件通过时序图去说明
 
-![图片描述](https://github.com/lishuailibertine/SLNativeJSMessage/blob/master/Prepare.jpg)
-
-![图片描述](https://github.com/lishuailibertine/SLNativeJSMessage/blob/master/SendMessage.jpg)
+### 通信组件通过时序图去说明
+![header](JS与原生iOS通信/Prepare.jpg)
+![header](JS与原生iOS通信/SendMessage.jpg)
 
 ### 通信组件在h5端如何使用
 
@@ -28,17 +27,15 @@ updated: 2019-07-11 13:40:46
 native.callMessage("callCamera",{""},function callback(argument) {
                 alert(argument);
 });
-``` 
+ 
 举例:其他功能
-
-```
-//其他
 native.callMessage("功能2",{""},function callback(argument) {
                console.log(原生返回的消息)；
 });
 ```
 
-###中间件介绍(NativeJS)
+### 中间件介绍(NativeJS)
+
 主要担任的职责:
 1、提供轻便易用的接口给H5使用;
 2、整合兼容UIWebview与WKWebview内核;
@@ -53,5 +50,3 @@ native.callMessage("功能2",{""},function callback(argument) {
 //WKWebview使用
 [self.jsContextManage captureJSContextBrigeWithType:SLJSContextManageType_WKWebview jsServer:@protocol(SLJSApi) nativeImp:nativeApi];
 ```
-------
-main body.
