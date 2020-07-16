@@ -3,7 +3,7 @@ title: Filecoin链
 comment: true
 tags: [工作中的点滴]
 date: 2020-04-30 14:50:04
-updated: 2020-04-30 14:50:04
+updated: 2020-07-16 10:54:04
 ---
 
 ------
@@ -18,13 +18,14 @@ updated: 2020-04-30 14:50:04
 3, lotus节点所有的api(包括钱包需要的，以及提供给节点使用的)[接口定义][3]
 4, 基于官方java库的一个[web钱包][4]
 5, Cid介绍[这里][5]
+6, BLS签名相关[BLS][6]
 <!--more-->
 
 ## 1. 账户系统
 
 ### 1.1 私钥
 
->与其他的链并无很大区别,它的coinType为461
+>bip44:与其他的链并无很大区别,它的coinType为461
 
 ### 1.2 地址组成
 
@@ -37,9 +38,12 @@ updated: 2020-04-30 14:50:04
 *SECP256K1*
 >payload: Blake2b(pubkeyData,20)
 
+*bls*
+>payload:pubkeyData length:40
+
 ## 2. 转账
 
-### 2.1 SECP256K1类型的message
+### 2.1 SECP256K1、BLS类型的message
 
 ```Objective-OC
 明文格式化信息:
@@ -71,9 +75,16 @@ updated: 2020-04-30 14:50:04
         params ="";//默认
 };
 ```
-### 2.2 SECP256K1类型的签名过程
 
->与以往的链不同的是，它序列化的数据是通过CBOR标准encode的,encode的内容会再生成一个内容寻址Cid,这个Cid会作为hash的输入参数，最后再把hash的被容进行签名,伪代码:base64(blake2b(cid(cbor(message))));
+### 2.2 SECP256K1、BLS类型的签名过程
+
+#### 生成签名数据过程
+>与以往的链不同的是，它序列化的数据是通过CBOR标准encode的,encode的内容会再生成一个内容寻址Cid,这个Cid会作为hash的输入参数，最后再把hash的被容进行签名,伪代码:base64(sign(blake2b(cid(cbor(messageArray)))));
+>特别注意生成cid之前对`params`是否为空的处理过程;
+
+### BLS签名
+官方库地址[BLS][6]; 各个平台的架构需要自己编译; iOS版本可参考这里[bls12-381][7]
+
 
 
   [1]: https://documenter.getpostman.com/view/4872192/SWLh5mUd?version=latest#d3695114-9bbb-4f63-a8d3-f7432e7c10da
@@ -81,3 +92,5 @@ updated: 2020-04-30 14:50:04
   [3]: https://github.com/filecoin-project/lotus/blob/master/api/api_full.go
   [4]: https://wallet.gamma.xjxh.pro/
   [5]: https://github.com/ipld/cid
+  [6]: https://github.com/filecoin-project/bls-signatures
+  [7]: https://github.com/lishuailibertine/filecoin-BLS
