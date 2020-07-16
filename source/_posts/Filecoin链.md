@@ -80,7 +80,8 @@ updated: 2020-07-16 10:54:04
 
 #### 生成签名数据过程
 >与以往的链不同的是，它序列化的数据是通过CBOR标准encode的,encode的内容会再生成一个内容寻址Cid,这个Cid会作为hash的输入参数，最后再把hash的被容进行签名,伪代码:base64(sign(blake2b(cid(cbor(messageArray)))));
->特别注意生成cid之前对`params`是否为空的处理过程;
+-------
+*特别注意生成cid之前对`params`是否为空的处理过程;*
 
 ### BLS签名
 官方库地址[BLS][6]; 各个平台的架构需要自己编译; iOS版本可参考这里[bls12-381][7]
